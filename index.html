@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <div class="w-full h-screen flex justify-center items-center bg-slate-300">
+        <div class="w-3/12 bg-white rounded-[15px] p-5">
+            <h3 class="text-2xl font-bold text-center"> Personal Information</h3>
+            <hr class="m-5">
+            <form class="flex flex-col justify-start gap-3" action="">
+                <div>
+                    <p class="font-bold">University:</p>
+                    <input class="w-full bg-gray-100 rounded-md p-1" type="text" id="uniname" name="uniname"><br>
+                    <input type="checkbox" id="checkbox1" name="checkbox1">
+                    <label for="checkbox1">Graduated</label>
+                </div>
+                <div>
+                    <label class="font-bold" for="name">Name:</label><br>
+                    <input class="w-full bg-gray-100 rounded-md p-1" type="text" id="name" name="name"><br>
+                </div>
+                <div>
+                    <label class="font-bold" for="birthday">Birthday:</label><br>
+                    <input type="date" id="birthday" name="birthday">
+                </div>
+                <div>
+                    <p class="font-bold">Sexual:</p>
+                    <input type="radio" name="sexual" value="male">
+                    <label for="male">Male</label><br>
+                    <input type="radio" name="sexual" value="female">
+                    <label for="female">Female</label><br>
+                </div>
+                <div>
+                    <label class="font-bold" for="favcolor">Select your favorite color:</label>
+                    <input type="color" id="favcolor" name="favcolor" value="#ff0000"><br>
+                </div>
+                <div>
+                    <label class="font-bold" for="favsport">Favorite sport:</label>
+                    <select name="favsport" id="favsport">
+                        <option value="Soccer" selected>Soccer</option>
+                        <option value="Swimming">Swimming</option>
+                        <option value="Basketball">Basketball</option>
+                        <option value="Another Sport">Another Sport</option>
+                    </select>
+                </div>
+                <div>
+                    <p class="font-bold">Range Value: <span id="ragvalue">50</span></p>
+                    <input type="range" min="1" max="100" value="50" oninput="RangeValue()" class="" id="myvalue">                   
+                </div>
+                <div class="flex flex-col justify-center items-center">
+                    <button class="bg-teal-300 p-2 pl-3 pr-3 rounded-lg hover:bg-teal-200 active:bg-teal-400" type="button" onclick="handleSubmit()">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
